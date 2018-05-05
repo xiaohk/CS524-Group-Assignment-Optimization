@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg"
+     xmlns:xlink="http://www.w3.org/1999/xlink"
+     xmlns:gadfly="http://www.gadflyjl.org/ns"
+     version="1.2"
+     width="250mm" height="100mm" viewBox="0 0 250 100"
+     stroke="none"
+     fill="#000000"
+     stroke-width="0.3"
+     font-size="3.88"
+>
+<g class="plotroot xscalable yscalable" id="img-ad5eefaa-1">
+  <g font-size="3.88" font-family="'PT Sans','Helvetica Neue','Helvetica',sans-serif" fill="#564A55" stroke="#000000" stroke-opacity="0.000" id="img-ad5eefaa-2">
+    <text x="132.65" y="88.39" text-anchor="middle" dy="0.6em">Project Index</text>
+  </g>
+  <g class="guide xlabels" font-size="2.82" font-family="'PT Sans Caption','Helvetica Neue','Helvetica',sans-serif" fill="#6C606B" id="img-ad5eefaa-3">
+    <text x="22.31" y="81.72" text-anchor="middle" dy="0.6em">0</text>
+    <text x="87.22" y="81.72" text-anchor="middle" dy="0.6em">10</text>
+    <text x="152.13" y="81.72" text-anchor="middle" dy="0.6em">20</text>
+    <text x="217.04" y="81.72" text-anchor="middle" dy="0.6em">30</text>
+  </g>
+<g clip-path="url(#img-ad5eefaa-4)">
+  <g id="img-ad5eefaa-5">
+    <g pointer-events="visible" opacity="1" fill="#000000" fill-opacity="0.000" stroke="#000000" stroke-opacity="0.000" class="guide background" id="img-ad5eefaa-6">
+      <rect x="20.31" y="10.61" width="224.7" height="70.1"/>
+    </g>
+    <g class="guide ygridlines xfixed" stroke-dasharray="0.5,0.5" stroke-width="0.2" stroke="#D0D0E0" id="img-ad5eefaa-7">
+      <path fill="none" d="M20.31,78.72 L 245 78.72"/>
+      <path fill="none" d="M20.31,62.19 L 245 62.19"/>
+      <path fill="none" d="M20.31,45.66 L 245 45.66"/>
+      <path fill="none" d="M20.31,29.14 L 245 29.14"/>
+      <path fill="none" d="M20.31,12.61 L 245 12.61"/>
+    </g>
+    <g class="guide xgridlines yfixed" stroke-dasharray="0.5,0.5" stroke-width="0.2" stroke="#D0D0E0" id="img-ad5eefaa-8">
+      <path fill="none" d="M22.31,10.61 L 22.31 80.72"/>
+      <path fill="none" d="M87.22,10.61 L 87.22 80.72"/>
+      <path fill="none" d="M152.13,10.61 L 152.13 80.72"/>
+      <path fill="none" d="M217.04,10.61 L 217.04 80.72"/>
+    </g>
+    <g class="plotpanel" id="img-ad5eefaa-9">
+      <g shape-rendering="crispEdges" stroke-width="0.3" id="img-ad5eefaa-10">
+        <g stroke="#000000" stroke-opacity="0.000" class="geometry" fill="#00BFFF" id="img-ad5eefaa-11">
+          <rect x="25.53" y="78.72" width="6.54" height="0.01"/>
+          <rect x="32.02" y="39.05" width="6.54" height="39.66"/>
+          <rect x="38.51" y="78.72" width="6.54" height="0.01"/>
+          <rect x="45" y="31.5" width="6.54" height="47.22"/>
+          <rect x="51.49" y="78.72" width="6.54" height="0.01"/>
+          <rect x="57.98" y="41.89" width="6.54" height="36.83"/>
+          <rect x="64.47" y="78.72" width="6.54" height="0.01"/>
+          <rect x="70.96" y="78.72" width="6.54" height="0.01"/>
+          <rect x="77.45" y="78.72" width="6.54" height="0.01"/>
+          <rect x="83.94" y="78.72" width="6.54" height="0.01"/>
+          <rect x="90.44" y="78.72" width="6.54" height="0.01"/>
+          <rect x="96.93" y="40.38" width="6.54" height="38.34"/>
+          <rect x="103.42" y="31.5" width="6.54" height="47.22"/>
+          <rect x="109.91" y="33.39" width="6.54" height="45.33"/>
+          <rect x="116.4" y="41.7" width="6.54" height="37.02"/>
+          <rect x="122.89" y="78.72" width="6.54" height="0.01"/>
+          <rect x="129.38" y="34.33" width="6.54" height="44.38"/>
+          <rect x="135.87" y="41.7" width="6.54" height="37.02"/>
+          <rect x="142.36" y="78.72" width="6.54" height="0.01"/>
+          <rect x="148.86" y="78.72" width="6.54" height="0.01"/>
+          <rect x="155.35" y="41.7" width="6.54" height="37.02"/>
+          <rect x="161.84" y="32.44" width="6.54" height="46.27"/>
+          <rect x="168.33" y="42.36" width="6.54" height="36.36"/>
+          <rect x="174.82" y="78.72" width="6.54" height="0.01"/>
+          <rect x="181.31" y="40.38" width="6.54" height="38.34"/>
+          <rect x="187.8" y="78.72" width="6.54" height="0.01"/>
+          <rect x="194.29" y="36.41" width="6.54" height="42.31"/>
+          <rect x="200.78" y="32.44" width="6.54" height="46.27"/>
+          <rect x="207.27" y="78.72" width="6.54" height="0.01"/>
+        </g>
+      </g>
+      <g class="geometry" stroke="#000000" stroke-opacity="0.000" fill="#4C404B" font-size="2.82" font-family="'PT Sans Caption','Helvetica Neue','Helvetica',sans-serif" id="img-ad5eefaa-12">
+        <text x="212.54" y="19.22" dy="0.35em">Individual Max</text>
+        <text x="212.54" y="65.49" dy="0.35em">Individual Min</text>
+        <text x="212.54" y="37.07" dy="0.35em">Individual Mean</text>
+      </g>
+      <g stroke-width="0.53" fill="#000000" fill-opacity="0.000" class="geometry" stroke-dasharray="4,1" stroke="#FFC0CB" id="img-ad5eefaa-13">
+        <path fill="none" d="M22.31,37.07 L 210.54 37.07"/>
+      </g>
+      <g stroke-width="0.53" fill="#000000" fill-opacity="0.000" class="geometry" stroke-dasharray="4,1" stroke="#FFC0CB" id="img-ad5eefaa-14">
+        <path fill="none" d="M22.31,65.49 L 210.54 65.49"/>
+      </g>
+      <g stroke-width="0.53" fill="#000000" fill-opacity="0.000" class="geometry" stroke-dasharray="4,1" stroke="#FFC0CB" id="img-ad5eefaa-15">
+        <path fill="none" d="M22.31,19.22 L 210.54 19.22"/>
+      </g>
+    </g>
+  </g>
+</g>
+  <g class="guide ylabels" font-size="2.82" font-family="'PT Sans Caption','Helvetica Neue','Helvetica',sans-serif" fill="#6C606B" id="img-ad5eefaa-16">
+    <text x="19.3" y="78.72" text-anchor="end" dy="0.35em">0.0</text>
+    <text x="19.3" y="62.19" text-anchor="end" dy="0.35em">2.5</text>
+    <text x="19.3" y="45.66" text-anchor="end" dy="0.35em">5.0</text>
+    <text x="19.3" y="29.14" text-anchor="end" dy="0.35em">7.5</text>
+    <text x="19.3" y="12.61" text-anchor="end" dy="0.35em">10.0</text>
+  </g>
+  <g font-size="3.88" font-family="'PT Sans','Helvetica Neue','Helvetica',sans-serif" fill="#564A55" stroke="#000000" stroke-opacity="0.000" id="img-ad5eefaa-17">
+    <text x="8.81" y="43.66" text-anchor="middle" dy="0.35em" transform="rotate(-90, 8.81, 45.66)">Group Experience Mean</text>
+  </g>
+  <g font-size="3.88" font-family="'PT Sans','Helvetica Neue','Helvetica',sans-serif" fill="#564A55" stroke="#000000" stroke-opacity="0.000" id="img-ad5eefaa-18">
+    <text x="132.65" y="5" text-anchor="middle" dy="0.6em">Group Experience Distribution</text>
+  </g>
+</g>
+<defs>
+  <clipPath id="img-ad5eefaa-4">
+  <path d="M20.31,10.61 L 245 10.61 245 80.72 20.31 80.72" />
+</clipPath>
+</defs>
+</svg>
