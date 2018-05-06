@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<meta charset="utf-8">
+<body> </body>
+<div> </div>
+<script src="https://d3js.org/d3.v3.js"  charset="utf-8"></script>
+
+
+<script>
+
+// Global variable
+var xs = [];
+var ys = [];
+var w = 800;
+var h = 500;
+
+var svg = d3.select("body")
+            .append("svg")
+            .attr("width", w)
+            .attr("height", h);
+
+var tooltip = d3.select("div")
+    .style("position", "absolute")
+    .style("z-index", "10")
+    .style("visibility", "hidden")
+    .text("a simple tooltip");
+
+var title = svg.append("rec")
+
+var circles;
+
+var dislikes = [{"c1":"0","c2":"0"},{"c1":"0","c2":"0"},{"c1":"0","c2":"0"},{"c1":"0","c2":"0"},{"c1":"0","c2":"0"},{"c1":"0","c2":"0"},{"c1":"0","c2":"0"},{"c1":"0","c2":"0"},{"c1":"53","c2":"0"},{"c1":"0","c2":"0"},{"c1":"0","c2":"0"},{"c1":"80","c2":"0"},{"c1":"51","c2":"0"},{"c1":"0","c2":"0"},{"c1":"0","c2":"0"},{"c1":"82","c2":"0"},{"c1":"0","c2":"0"},{"c1":"0","c2":"0"},{"c1":"0","c2":"0"},{"c1":"74","c2":"0"},{"c1":"0","c2":"0"},{"c1":"71","c2":"0"},{"c1":"0","c2":"0"},{"c1":"0","c2":"0"},{"c1":"0","c2":"0"},{"c1":"0","c2":"0"},{"c1":"0","c2":"0"},{"c1":"0","c2":"0"},{"c1":"0","c2":"0"},{"c1":"0","c2":"0"},{"c1":"0","c2":"0"},{"c1":"14","c2":"27"},{"c1":"0","c2":"0"},{"c1":"0","c2":"0"},{"c1":"0","c2":"0"},{"c1":"0","c2":"0"},{"c1":"52","c2":"0"},{"c1":"0","c2":"0"},{"c1":"15","c2":"0"},{"c1":"0","c2":"0"},{"c1":"0","c2":"0"},{"c1":"0","c2":"0"},{"c1":"0","c2":"0"},{"c1":"40","c2":"0"},{"c1":"0","c2":"0"},{"c1":"0","c2":"0"},{"c1":"76","c2":"0"},{"c1":"0","c2":"0"},{"c1":"0","c2":"0"},{"c1":"76","c2":"0"},{"c1":"0","c2":"0"},{"c1":"0","c2":"0"},{"c1":"0","c2":"0"},{"c1":"0","c2":"0"},{"c1":"0","c2":"0"},{"c1":"0","c2":"0"},{"c1":"0","c2":"0"},{"c1":"0","c2":"0"},{"c1":"0","c2":"0"},{"c1":"0","c2":"0"},{"c1":"0","c2":"0"},{"c1":"0","c2":"0"},{"c1":"0","c2":"0"},{"c1":"0","c2":"0"},{"c1":"0","c2":"0"},{"c1":"0","c2":"0"},{"c1":"0","c2":"0"},{"c1":"0","c2":"0"},{"c1":"0","c2":"0"},{"c1":"0","c2":"0"},{"c1":"0","c2":"0"},{"c1":"0","c2":"0"},{"c1":"0","c2":"0"},{"c1":"0","c2":"0"},{"c1":"0","c2":"0"},{"c1":"0","c2":"0"},{"c1":"0","c2":"0"},{"c1":"44","c2":"0"},{"c1":"0","c2":"0"},{"c1":"0","c2":"0"},{"c1":"0","c2":"0"},{"c1":"38","c2":"0"},{"c1":"0","c2":"0"},{"c1":"0","c2":"0"},{"c1":"0","c2":"0"},{"c1":"4","c2":"0"},{"c1":"0","c2":"0"},{"c1":"0","c2":"0"},{"c1":"0","c2":"0"},{"c1":"0","c2":"0"}]
+
+var likes = [{"c1":"81","c2":"32","c3":"42"},{"c1":"67","c2":"18","c3":"0"},{"c1":"22","c2":"7","c3":"0"},{"c1":"4","c2":"45","c3":"72"},{"c1":"43","c2":"5","c3":"87"},{"c1":"28","c2":"89","c3":"25"},{"c1":"75","c2":"37","c3":"27"},{"c1":"16","c2":"32","c3":"41"},{"c1":"58","c2":"9","c3":"16"},{"c1":"10","c2":"36","c3":"0"},{"c1":"51","c2":"4","c3":"36"},{"c1":"0","c2":"0","c3":"0"},{"c1":"90","c2":"0","c3":"0"},{"c1":"0","c2":"0","c3":"0"},{"c1":"30","c2":"0","c3":"0"},{"c1":"20","c2":"9","c3":"25"},{"c1":"55","c2":"26","c3":"17"},{"c1":"63","c2":"74","c3":"0"},{"c1":"57","c2":"19","c3":"6"},{"c1":"41","c2":"47","c3":"90"},{"c1":"0","c2":"0","c3":"0"},{"c1":"0","c2":"0","c3":"0"},{"c1":"69","c2":"50","c3":"38"},{"c1":"44","c2":"0","c3":"0"},{"c1":"57","c2":"19","c3":"79"},{"c1":"26","c2":"65","c3":"86"},{"c1":"7","c2":"47","c3":"12"},{"c1":"35","c2":"25","c3":"7"},{"c1":"62","c2":"50","c3":"53"},{"c1":"32","c2":"51","c3":"61"},{"c1":"0","c2":"0","c3":"0"},{"c1":"1","c2":"51","c3":"0"},{"c1":"74","c2":"35","c3":"0"},{"c1":"69","c2":"50","c3":"29"},{"c1":"0","c2":"0","c3":"0"},{"c1":"10","c2":"0","c3":"0"},{"c1":"74","c2":"28","c3":"78"},{"c1":"84","c2":"31","c3":"0"},{"c1":"0","c2":"0","c3":"0"},{"c1":"38","c2":"62","c3":"23"},{"c1":"41","c2":"43","c3":"48"},{"c1":"12","c2":"16","c3":"0"},{"c1":"4","c2":"45","c3":"72"},{"c1":"24","c2":"0","c3":"0"},{"c1":"5","c2":"4","c3":"49"},{"c1":"71","c2":"81","c3":"46"},{"c1":"20","c2":"47","c3":"65"},{"c1":"0","c2":"0","c3":"0"},{"c1":"61","c2":"32","c3":"0"},{"c1":"29","c2":"50","c3":"40"},{"c1":"51","c2":"11","c3":"63"},{"c1":"0","c2":"0","c3":"0"},{"c1":"83","c2":"42","c3":"20"},{"c1":"0","c2":"0","c3":"0"},{"c1":"55","c2":"17","c3":"26"},{"c1":"0","c2":"0","c3":"0"},{"c1":"19","c2":"76","c3":"30"},{"c1":"58","c2":"66","c3":"16"},{"c1":"30","c2":"0","c3":"0"},{"c1":"0","c2":"0","c3":"0"},{"c1":"61","c2":"30","c3":"51"},{"c1":"50","c2":"23","c3":"62"},{"c1":"0","c2":"0","c3":"0"},{"c1":"50","c2":"53","c3":"83"},{"c1":"41","c2":"47","c3":"65"},{"c1":"0","c2":"0","c3":"0"},{"c1":"2","c2":"0","c3":"0"},{"c1":"0","c2":"0","c3":"0"},{"c1":"62","c2":"23","c3":"29"},{"c1":"23","c2":"60","c3":"57"},{"c1":"0","c2":"0","c3":"0"},{"c1":"4","c2":"43","c3":"45"},{"c1":"0","c2":"0","c3":"0"},{"c1":"0","c2":"0","c3":"0"},{"c1":"7","c2":"0","c3":"0"},{"c1":"27","c2":"36","c3":"0"},{"c1":"0","c2":"0","c3":"0"},{"c1":"37","c2":"78","c3":"65"},{"c1":"6","c2":"65","c3":"37"},{"c1":"35","c2":"0","c3":"0"},{"c1":"0","c2":"0","c3":"0"},{"c1":"0","c2":"0","c3":"0"},{"c1":"68","c2":"73","c3":"83"},{"c1":"0","c2":"0","c3":"0"},{"c1":"41","c2":"0","c3":"0"},{"c1":"0","c2":"0","c3":"0"},{"c1":"5","c2":"0","c3":"0"},{"c1":"0","c2":"0","c3":"0"},{"c1":"0","c2":"0","c3":"0"},{"c1":"13","c2":"0","c3":"0"}]
+
+
+fill_circles(likes);
+draw_lines(likes, dislikes);
+draw_circles(likes);
+console.log(likes);
+
+// Draw each circle
+function draw_circles(data){
+
+    circles = svg.selectAll("circle")
+                 .data(data)
+                 .enter()
+                 .append("circle");
+
+    circles.attr("cx", function(d, i){
+                return xs[i];
+            })
+            .attr("cy", function(d, i){
+                return ys[i];
+            })
+            .attr("r", function(d, i){
+                return 5;
+            })
+            .append("svg:title")
+            .text(function(d, i){
+                return i;
+            });
+            /*
+            .on("mouseover", function(){
+                return tooltip.style("visibility", "visible");
+            })
+            .on("mousemove", function(d, i){
+                return tooltip.style("top", (event.pageY-10)+"px")
+                              .style("left",(event.pageX+10)+"px")
+                              .text((i + 1).toString());
+            })
+            .on("mouseout", function(){
+                return tooltip.style("visibility", "hidden");
+            });
+            */
+
+}
+
+
+// For each circle, give it a random position
+function fill_circles(data){
+    var itr_i;
+    for(itr_i = 0; itr_i < data.length; itr_i++){
+        // Give it a random position
+        xs.push(Math.floor(5 + Math.random() * (w - 10)));
+        ys.push(Math.floor(5 + Math.random() * (h - 10)));
+    }
+}
+
+// For each connection, draw a straight line
+function draw_lines(likes, dislikes){
+    // We first fill the lines list
+    // We define each element as [x1, y1, x2, y2]
+    var likes_lines = [];
+    var dislikes_lines = [];
+    var itr_i;
+    for(itr_i = 0; itr_i < likes.length; itr_i++){
+        // Julia is using 1-based index
+        var p1 = likes[itr_i]["c1"] - 1;
+        var p2 = likes[itr_i]["c2"] - 1;
+        var p3 = likes[itr_i]["c3"] - 1;
+        var p4 = dislikes[itr_i]["c1"] - 1;
+        var p5 = dislikes[itr_i]["c2"] - 1;
+        var ps = [p1, p2, p3];
+        var pss = [p4, p5];
+
+        // Fill the likes line first
+        var itr_p;
+        for(itr_p = 0; itr_p < 3; itr_p++){
+            var p = ps[itr_p];
+
+            // Hitting 0
+            if (p == -1){
+                break;
+            }
+
+            // Construct one line
+            var line = [];
+            line.push(xs[itr_i]);
+            line.push(ys[itr_i]);
+            line.push(xs[p]);
+            line.push(ys[p]);
+
+            // Add to the lines array
+            likes_lines.push(line);
+        }
+
+        // Then fill the dislikes line
+        for(itr_p = 0; itr_p < 2; itr_p++){
+            var p = pss[itr_p];
+
+            // Hitting 0
+            if (p == -1){
+                break;
+            }
+
+            // Construct one line
+            var line = [];
+            line.push(xs[itr_i]);
+            line.push(ys[itr_i]);
+            line.push(xs[p]);
+            line.push(ys[p]);
+
+            // Add to the lines array
+            dislikes_lines.push(line);
+        }
+    }
+
+    // Now we can draw the lines
+    // Use gray for the like lines
+    var like_lines = svg.selectAll("line.like")
+                        .data(likes_lines)
+                        .enter()
+                        .append("line");
+
+    like_lines.style("stroke", "rgba(0,0,0,0.2)")
+        .attr("x1", function(d){
+            return d[0];
+        })
+        .attr("y1", function(d){
+            return d[1];
+        })
+        .attr("x2", function(d){
+            return d[2];
+        })
+        .attr("y2", function(d){
+            return d[3];
+        });
+
+    // Use red to draw the dislikes line
+    var dislike_lines = svg.selectAll("line.dislike")
+                           .data(dislikes_lines)
+                           .enter()
+                           .append("line");
+
+    dislike_lines.style("stroke", "rgba(255,0,0,0.5)")
+                .attr("x1", function(d){
+                    return d[0];
+                })
+                .attr("y1", function(d){
+                    return d[1];
+                })
+                .attr("x2", function(d){
+                    return d[2];
+                })
+                .attr("y2", function(d){
+                    return d[3];
+                });
+
+}
+
+</script>
