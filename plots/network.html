@@ -55,11 +55,6 @@ function draw_circles(data){
             .attr("r", function(d, i){
                 return 5;
             })
-            .append("svg:title")
-            .text(function(d, i){
-                return i;
-            });
-            /*
             .on("mouseover", function(){
                 return tooltip.style("visibility", "visible");
             })
@@ -71,7 +66,6 @@ function draw_circles(data){
             .on("mouseout", function(){
                 return tooltip.style("visibility", "hidden");
             });
-            */
 
 }
 
