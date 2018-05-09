@@ -8,10 +8,10 @@ I specialized my goal to improve [CS 506](https://www.cs.wisc.edu/courses/506) p
 
 <p align="center">
     <img src="https://i.imgur.com/yemaelq.png" alt>
-		<em>Example of the solution visualization</em>
+		<em>Example of the <a href="http://nbviewer.jupyter.org/github/xiaohk/CS524-Group-Assignment-Optimization/blob/master/plots/solution.html">solution visualization<a></em>
 </p>
 
-Fortunately, the project got the highest grades "in terms of originality, creativity, insightful commentary, educational value, and general awesomeness." I am also honored to have free lunch with our professor. 
+Fortunately, the project got the highest grades in terms of "originality, creativity, insightful commentary, educational value, and general awesomeness." I am also honored to have a free lunch with our professor. 
 
 ## Notes
 1. To run all cells in the [notebook](./Wang.ipynb), you want to have [Gurobi](http://www.gurobi.com) correctly installed.
